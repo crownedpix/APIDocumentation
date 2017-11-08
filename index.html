@@ -94,7 +94,9 @@
 
             <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
 
-            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the
+                following:
+            </p>
 
             <!-- code block -->
             <p><code>Authorization: meowmeowmeow</code></p>
@@ -108,6 +110,9 @@
 
             <h1 id='kittens'>Users</h1>
 
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Users</h2>
+            <!-- Sub API list heading END -->
 
             <p>This endpoint retrieves all Users.</p>
             <!-- sub headings -->
@@ -209,6 +214,87 @@
 
 
             <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Single User</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>Get /listUser/:id</code></p>
+
+            <p><code>
+              <pre>  {
+                    "firstname": "stringslash",
+                    "lastname": "network",
+                    "email": "string.slash@gmail.com",
+                    "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
+                    "createdAt": "2017-10-02T07:35:57.026Z",
+                    "updatedAt": "2017-11-08T18:32:59.703Z",
+                    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+                    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+                    "status": "SUSPEND",
+                    "id": "59d1ec5d8538cc30101311b0",
+                    "count": 30
+                }</pre>
+            </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>lastname of User</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>email of User</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>password of User</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>createdAt of the User</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updatedAt of the User</td>
+                    </tr>
+                    <tr>
+                        <td>confirmationToken</td>
+                        <td>confirmationToken of the User</td>
+                    </tr>
+                    <tr>
+                        <td>about</td>
+                        <td>about the User</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Status of the User</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Add a User</h2>
             <!-- Sub API list heading END -->
 
@@ -263,8 +349,300 @@
                 </tbody>
             </table>
 
-            <h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2>
 
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>User Login</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Login a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>POST /login</code></p>
+
+            <p><code>
+                 <pre>
+                    {
+                        "email": "devecha.abid1@gmail.com",
+                        "password": "012345"
+                    }</pre>
+               </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email</td>
+                        <td>email of the User</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>password of User</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>User Profile Edit</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Edit a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>PUT /profileEdit</code></p>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>User Email Verification</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Verify's the specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>GET /user/verify/:tokenId</code></p>
+
+            <p><code>
+                <pre>
+                {
+                    "message": "success"
+                }</pre>
+            </code></p>
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Reset Password</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Reset password of a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>POST /user/resetpassword?token=dsfdasfewrewqr21321</code></p>
+
+            <p><code>
+                 <pre>
+                        { 
+                            "password" : "new",
+                            "confirmPassword": "new"
+                            }</pre>
+               </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>password</td>
+                        <td>password of the User</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>confirmPassword of User</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Change Password</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Change password of a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>POST /user/:userId/change-password</code></p>
+
+            <p><code>
+                    <pre>
+                        {
+                            "oldPassword" : "lsdklfjdslkfjsdlkfjdsf",
+                            "password" : "newClarity",
+                            "confirmPassword" : "newClarity"
+                        }</pre>
+             </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>oldPassword</td>
+                        <td>oldPassword of the User</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>Password of User</td>
+                    </tr>
+                    <tr>
+                        <td>confirmPassword</td>
+                        <td>confirmPassword of User</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Forgot Password</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Forgot password of a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>POST /user/forgot-password</code></p>
+
+            <p><code>
+                                <pre>
+                                        {"email":"someone@gmail.com"}</pre>
+                         </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>email</td>
+                        <td>email of the User</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Suspend User</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Suspend a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>GET /suspend/:userId</code></p>
+
+            <p><code>
+                    <pre>
+                            {
+                                "firstname": "stringslash",
+                                "lastname": "network",
+                                "email": "string.slash@gmail.com",
+                                "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
+                                "createdAt": "2017-10-02T07:35:57.026Z",
+                                "updatedAt": "2017-11-08T18:32:59.703Z",
+                                "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+                                "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+                                "status": "SUSPEND",
+                                "id": "59d1ec5d8538cc30101311b0"
+                            }</pre>
+             </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>lastname of User</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>email of User</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>password of User</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>createdAt of the User</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updatedAt of the User</td>
+                    </tr>
+                    <tr>
+                        <td>confirmationToken</td>
+                        <td>confirmationToken of the User</td>
+                    </tr>
+                    <tr>
+                        <td>about</td>
+                        <td>about the User</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Status of the User</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Trashed post by User ID</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Trashed post of specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>GET /trashedPosts/:userId</code></p>
+            <h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2>
 
             <p>This endpoint deletes a specific kitten.</p>
             <h3 id='http-request-3'>HTTP Request</h3>
@@ -285,8 +663,9 @@
                 </tbody>
             </table>
             <h1 id='errors'>Errors</h1>
-            <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter.
-                Files are included in the order listed.</aside>
+            <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate
+                out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s
+                frontmatter. Files are included in the order listed.</aside>
 
             <p>The Kittn API uses the following error codes:</p>
 
