@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from lord.github.io/slate/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2017 16:13:42 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+    <script src="javascripts/all.js"></script>
+</head>
+
+<body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+        <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+        <img src="images/logo.png" class="logo" alt="Logo" />
+
+        <div class="search">
+            <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+
+        <!-- Sidebox for title START-->
+        <div id="toc" class="toc-list-h1">
+            <li>
+                <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            </li>
+            <li>
+                <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            </li>
+            <li>
+                <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+                <ul class="toc-list-h2">
+                    <li>
+                        <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    </li>
+                    <li>
+                        <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    </li>
+                    <li>
+                        <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            </li>
+        </div>
+        <!-- Sidebox for title END-->
+
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation by Crownedpix</a></li>
+        </ul>
+    </div>
+    <!-- Wrapper box -->
+    <div class="page-wrapper">
+        <div class="dark-box"></div>
+        <!-- Grey bgbox -->
+        <div class="content">
+
+            <!-- title -->
+            <h1 id='introduction'>Introduction</h1>
+            <!-- title END -->
+
+            <p>Here the API blocks are listed to Angular Blog template. All APIs used in the Application are listed here.</p>
+
+            <p>We Used Sails.js to run the API. You can simply follow the online Video tutorial listed below.</p>
+
+            <p>To run the API on Heroku follow this video <a href="https://github.com/lord/slate">Run Sails on Heroku</a>.</p>
+
+            <p>To run the API on local follow this video <a href="https://github.com/lord/slate">Run Sails on Localhost</a>.</p>
+
+            <p> Feel free contact us at <i>devecha.abid@gmail.com</i></p>
+
+            <!-- title -->
+            <h1 id='authentication'>API listing</h1>
+            <!-- title END -->
+
+            <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+            <!-- code block -->
+            <p><code>Authorization: meowmeowmeow</code></p>
+            <!-- code block END -->
+
+            <!-- notiec text -->
+            <aside class="notice">
+                You must replace <code>meowmeowmeow</code> with your personal API key.
+            </aside>
+            <!-- notice text END -->
+
+            <h1 id='kittens'>Users</h1>
+
+
+            <p>This endpoint retrieves all Users.</p>
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /users</code></p>
+            <!-- code block END -->
+
+            <!-- success box -->
+            <aside class="success">
+                Returns an Array with objects of Users
+            </aside>
+            <!-- success box END -->
+
+            <p><code>
+<pre>[{
+      "firstname": "stringslash",
+      "lastname": "network",
+      "email": "string.slash@gmail.com",
+      "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
+      "createdAt": "2017-10-02T07:35:57.026Z",
+      "updatedAt": "2017-11-04T03:41:05.266Z",
+      "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+      "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+      "status": "ACTIVE",
+      "id": "59d1ec5d8538cc30101311b0",
+      "count": 30
+    },
+    {
+      "firstname": "stringslash",
+      "lastname": "network",
+      "email": "string.slash@gmail.com",
+      "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
+      "createdAt": "2017-10-02T07:35:57.026Z",
+      "updatedAt": "2017-11-04T03:41:05.266Z",
+      "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+      "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+      "status": "ACTIVE",
+      "id": "59d1ec5d8538cc30101311b0",
+      "count": 30
+}] </pre>
+            </code></p>
+
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>First name of Registered User.</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>Lastname of Registered User.</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Registered Email for this user</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>Date user is Created.</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>Date User is Updated.</td>
+                    </tr>
+                    <tr>
+                        <td>confirmationToken</td>
+                        <td>Confirmation token for more Auth Security.</td>
+                    </tr>
+                    <tr>
+                        <td>about</td>
+                        <td>About details about this User</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>Can be ACTIVE/SUSPEND</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Registered Unique ID for this user</td>
+                    </tr>
+                    <tr>
+                        <td>count</td>
+                        <td>Total Posts count by this User.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- query box END -->
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Add a User</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Adds a specific User.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p><code>POST /register</code></p>
+
+            <p><code>
+              <pre>{
+  "firstname": "stringslash", 
+  "lastname": "", 
+  "email"": "devecha.abid1@gmail.com",
+  "password": "012345",
+  "passwordConfirm": "012345"
+}</pre>
+            </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>Firstname of the User</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>lastname of User</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Email of the User</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>Password of the User</td>
+                    </tr>
+                    <tr>
+                        <td>passwordConfirm</td>
+                        <td>Confirmation Password of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2>
+
+
+            <p>This endpoint deletes a specific kitten.</p>
+            <h3 id='http-request-3'>HTTP Request</h3>
+            <p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+            <h3 id='url-parameters-2'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the kitten to delete</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 id='errors'>Errors</h1>
+            <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter.
+                Files are included in the order listed.</aside>
+
+            <p>The Kittn API uses the following error codes:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Error Code</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>400</td>
+                        <td>Bad Request -- Your request sucks.</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Unauthorized -- Your API key is wrong.</td>
+                    </tr>
+                    <tr>
+                        <td>403</td>
+                        <td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td>Not Found -- The specified kitten could not be found.</td>
+                    </tr>
+                    <tr>
+                        <td>405</td>
+                        <td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+                    </tr>
+                    <tr>
+                        <td>406</td>
+                        <td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+                    </tr>
+                    <tr>
+                        <td>410</td>
+                        <td>Gone -- The kitten requested has been removed from our servers.</td>
+                    </tr>
+                    <tr>
+                        <td>418</td>
+                        <td>I&#39;m a teapot.</td>
+                    </tr>
+                    <tr>
+                        <td>429</td>
+                        <td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+                    </tr>
+                    <tr>
+                        <td>503</td>
+                        <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+
+<!-- Mirrored from lord.github.io/slate/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2017 16:13:44 GMT -->
+
+</html>
