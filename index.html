@@ -44,7 +44,7 @@
                 <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
             </li>
             <li>
-                <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+                <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">User</a>
                 <ul class="toc-list-h2">
                     <li>
                         <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
@@ -57,6 +57,20 @@
                     </li>
                 </ul>
             </li>
+
+            <li>
+                <a href="#Category" class="toc-h1 toc-link" data-title="Category">Category</a>
+            </li>
+            <li>
+                <a href="#Posts" class="toc-h1 toc-link" data-title="Posts">Posts</a>
+            </li>
+            <li>
+                <a href="#Comments" class="toc-h1 toc-link" data-title="Comments">Comments</a>
+            </li>
+            <li>
+                <a href="#settings" class="toc-h1 toc-link" data-title="settings">settings</a>
+            </li>
+
             <li>
                 <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
             </li>
@@ -714,12 +728,35 @@
 
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>GET /trashedPosts/:userId</code></p>
-            <h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2>
 
-            <p>This endpoint deletes a specific kitten.</p>
-            <h3 id='http-request-3'>HTTP Request</h3>
-            <p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-            <h3 id='url-parameters-2'>URL Parameters</h3>
+            <h1 id='Category'>Category</h1>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Add Category</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint adds the Category.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>POST /category</code></p>
+            <!-- code block END -->
+
+            <p><code>
+            <pre>{
+                    "name": "General", 
+                    "about": "Basic Category listing"
+                  } </pre>
+             </code></p>
+
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -729,11 +766,328 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>ID</td>
-                        <td>The ID of the kitten to delete</td>
+                        <td>Name</td>
+                        <td>Name of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>About the Category.</td>
                     </tr>
                 </tbody>
             </table>
+            <!-- query box END -->
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get All Categories</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives all the Categories.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /category</code></p>
+            <!-- code block END -->
+
+            <p><code>
+               <pre>[
+                    {
+                        "name": "fgdfgdfg",
+                        "about": "dfgdfgfdg",
+                        "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
+                        "createdAt": "2017-11-06T18:54:25.146Z",
+                        "updatedAt": "2017-11-06T18:54:25.146Z",
+                        "id": "5a00afe1c567830400e7f921",
+                        "count": 0
+                    }
+                ] </pre>
+                </code></p>
+
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>About the Category.</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated dtae of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>count</td>
+                        <td>count of the category.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- query box END -->
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Delete Category</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Delete the Category.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>DELETE /category/:id</code></p>
+            <!-- code block END -->
+            <!-- query box END -->
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Edit Category</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint edits all the Categories.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>PUT /category/:id</code></p>
+            <!-- code block END -->
+
+            <p><code>
+                <pre>
+                        {
+                            "name": "News", 
+                            "about": "Basic News Category listing"
+                          }
+                </pre>
+            </code></p>
+
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>About the Category.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- query box END -->
+
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Single Category</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives the Single Category.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /category/:id</code></p>
+            <!-- code block END -->
+
+            <p><code>
+                <pre>
+                        [
+                        {
+                            "name": "fgdfgdfg",
+                            "about": "dfgdfgfdg",
+                            "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
+                            "createdAt": "2017-11-06T18:54:25.146Z",
+                            "updatedAt": "2017-11-06T18:54:25.146Z",
+                            "id": "5a00afe1c567830400e7f921",
+                            "count": 0
+                        }
+                    ]
+                </pre>
+            </code></p>
+
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Name of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>About the Category.</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated dtae of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the category.</td>
+                    </tr>
+                    <tr>
+                        <td>count</td>
+                        <td>count of the category.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- query box END -->
+
+            <h1 id='Posts'>Posts</h1>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Reported posts</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrieves the Reported posts.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /reportedPosts/</code></p>
+            <!-- code block END -->
+
+            <!-- query box END -->
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Trash post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives the Trash post.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /trash/59ddfc65145da07419dd8cfa</code></p>
+            <!-- code block END -->
+            <!-- query box END -->
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Trashed post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives the Trashed post.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /trashedPosts/</code></p>
+            <!-- code block END -->
+            <!-- query box END -->
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Search Posts</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives the Search Posts.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /post/:str/search</code></p>
+            <!-- code block END -->
+            <!-- query box END -->
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'> Set views</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Set the post views.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p><code>GET /post/:postId/:deviceid/tipViews</code></p>
+            <!-- code block END -->
+            <!-- query box END -->
+
             <h1 id='errors'>Errors</h1>
             <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter.
                 Files are included in the order listed.</aside>
