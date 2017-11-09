@@ -94,8 +94,7 @@
 
             <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
 
-            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the
-                following:
+            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
             </p>
 
             <!-- code block -->
@@ -405,6 +404,79 @@
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>PUT /profileEdit</code></p>
 
+            <p><code>
+              <pre>  
+{
+  "firstname": "something Again",
+  "lastname": "someName",
+  "about": null,
+  "mobile": "99999999999",
+  "state": "AP",
+  "country": "India",
+  "imageURL": "https://blogsterl.s3.amazonaws.com/images/1508438070634_file.jpeg",
+  "facebook": "Faceebook.com",
+  "twitter": "twitter.com",
+  "google": "google.com",
+  "instagram": "intagram.com"
+}</pre>
+            </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>lastname of User</td>
+                    </tr>
+                    <tr>
+                        <td>about</td>
+                        <td>About User</td>
+                    </tr>
+                    <tr>
+                        <td>mobile</td>
+                        <td>Mobile number of User</td>
+                    </tr>
+                    <tr>
+                        <td>state</td>
+                        <td>State of the User</td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Country of the User</td>
+                    </tr>
+                    <tr>
+                        <td>imageURL</td>
+                        <td>Image of the User</td>
+                    </tr>
+                    <tr>
+                        <td>facebook</td>
+                        <td>Facebook URL the User</td>
+                    </tr>
+                    <tr>
+                        <td>twitter</td>
+                        <td>Twitter URL of the User</td>
+                    </tr>
+                    <tr>
+                        <td>google</td>
+                        <td>Google URL of the User</td>
+                    </tr>
+                    <tr>
+                        <td>instagram</td>
+                        <td>Instagram URL of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>User Email Verification</h2>
             <!-- Sub API list heading END -->
@@ -663,9 +735,8 @@
                 </tbody>
             </table>
             <h1 id='errors'>Errors</h1>
-            <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate
-                out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s
-                frontmatter. Files are included in the order listed.</aside>
+            <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter.
+                Files are included in the order listed.</aside>
 
             <p>The Kittn API uses the following error codes:</p>
 
