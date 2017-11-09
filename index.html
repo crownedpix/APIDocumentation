@@ -237,25 +237,42 @@
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>Get /listUser/:id</code></p>
+            <p><code>Get /listUser/&lt;ID&gt;</code></p>
 
             <p><code>
-              <pre>  {
-                    "firstname": "stringslash",
-                    "lastname": "network",
-                    "email": "string.slash@gmail.com",
-                    "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
-                    "createdAt": "2017-10-02T07:35:57.026Z",
-                    "updatedAt": "2017-11-08T18:32:59.703Z",
-                    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
-                    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
-                    "status": "SUSPEND",
-                    "id": "59d1ec5d8538cc30101311b0",
-                    "count": 30
-                }</pre>
+<pre>  
+{
+    "firstname": "stringslash",
+    "lastname": "network",
+    "email": "string.slash@gmail.com",
+    "createdAt": "2017-10-02T07:35:57.026Z",
+    "updatedAt": "2017-11-08T18:32:59.703Z",
+    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "SUSPEND",
+    "id": "59d1ec5d8538cc30101311b0",
+    "count": 30
+}</pre>
             </code></p>
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to retrieve</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -275,10 +292,6 @@
                     <tr>
                         <td>email</td>
                         <td>email of User</td>
-                    </tr>
-                    <tr>
-                        <td>password</td>
-                        <td>password of User</td>
                     </tr>
                     <tr>
                         <td>createdAt</td>
@@ -321,7 +334,8 @@
             <p><code>POST /register</code></p>
 
             <p><code>
-              <pre>{
+<pre>
+{
   "firstname": "stringslash", 
   "lastname": "", 
   "email"": "devecha.abid1@gmail.com",
@@ -330,7 +344,7 @@
 }</pre>
             </code></p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -377,14 +391,14 @@
             <p><code>POST /login</code></p>
 
             <p><code>
-                 <pre>
-                    {
-                        "email": "devecha.abid1@gmail.com",
-                        "password": "012345"
-                    }</pre>
+<pre>
+{
+    "email": "devecha.abid1@gmail.com",
+    "password": "012345"
+}</pre>
                </code></p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -419,15 +433,14 @@
             <p><code>PUT /profileEdit</code></p>
 
             <p><code>
-              <pre>  
-{
+<pre>{
   "firstname": "something Again",
   "lastname": "someName",
   "about": null,
   "mobile": "99999999999",
   "state": "AP",
   "country": "India",
-  "imageURL": "https://blogsterl.s3.amazonaws.com/images/1508438070634_file.jpeg",
+  "imageURL": "https://blogsterl.s3.amazonaws.com/file.jpeg",
   "facebook": "Faceebook.com",
   "twitter": "twitter.com",
   "google": "google.com",
@@ -435,7 +448,7 @@
 }</pre>
             </code></p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -502,14 +515,49 @@
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /user/verify/:tokenId</code></p>
+            <p><code>GET /user/verify/&lt;tokenId&gt;</code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tokenId</td>
+                        <td>The tokenId of the User to verify</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
 
             <p><code>
-                <pre>
-                {
-                    "message": "success"
-                }</pre>
+<pre>
+{
+    "message": "success"
+}</pre>
             </code></p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
 
             <!-- Sub API list heading -->
@@ -526,14 +574,14 @@
             <p><code>POST /user/resetpassword?token=dsfdasfewrewqr21321</code></p>
 
             <p><code>
-                 <pre>
-                        { 
-                            "password" : "new",
-                            "confirmPassword": "new"
-                            }</pre>
+<pre>
+{ 
+  "password" : "new",
+  "confirmPassword": "new"
+}</pre>
                </code></p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -565,18 +613,34 @@
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /user/:userId/change-password</code></p>
+            <p><code>POST /user/&lt;ID&gt;/change-password</code></p>
 
             <p><code>
-                    <pre>
-                        {
-                            "oldPassword" : "lsdklfjdslkfjsdlkfjdsf",
-                            "password" : "newClarity",
-                            "confirmPassword" : "newClarity"
-                        }</pre>
+<pre>
+{
+    "oldPassword" : "lsdklfjdslkfjsdlkfjdsf",
+    "password" : "newClarity",
+    "confirmPassword" : "newClarity"
+}</pre>
              </code></p>
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to Change password of</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -614,11 +678,15 @@
             <p><code>POST /user/forgot-password</code></p>
 
             <p><code>
-                                <pre>
-                                        {"email":"someone@gmail.com"}</pre>
-                         </code></p>
+<pre>
+{
+    "email":"someone@gmail.com"
+}
+</pre>
+</code>
+            </p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -646,25 +714,41 @@
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /suspend/:userId</code></p>
+            <p><code>GET /suspend/&lt;ID&gt;</code></p>
 
             <p><code>
-                    <pre>
-                            {
-                                "firstname": "stringslash",
-                                "lastname": "network",
-                                "email": "string.slash@gmail.com",
-                                "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
-                                "createdAt": "2017-10-02T07:35:57.026Z",
-                                "updatedAt": "2017-11-08T18:32:59.703Z",
-                                "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
-                                "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
-                                "status": "SUSPEND",
-                                "id": "59d1ec5d8538cc30101311b0"
-                            }</pre>
+<pre>
+{
+    "firstname": "stringslash",
+    "lastname": "network",
+    "email": "string.slash@gmail.com",   
+    "createdAt": "2017-10-02T07:35:57.026Z",
+    "updatedAt": "2017-11-08T18:32:59.703Z",
+    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "SUSPEND",
+    "id": "59d1ec5d8538cc30101311b0"
+}</pre>
              </code></p>
 
+
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to suspend</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -727,7 +811,23 @@
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /trashedPosts/:userId</code></p>
+            <p><code>GET /trashedPosts/&lt;ID&gt;</code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Post to apply</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h1 id='Category'>Category</h1>
 
@@ -749,10 +849,11 @@
             <!-- code block END -->
 
             <p><code>
-            <pre>{
-                    "name": "General", 
-                    "about": "Basic Category listing"
-                  } </pre>
+<pre>
+{
+   "name": "General", 
+   "about": "Basic Category listing"
+}</pre>
              </code></p>
 
             <!-- query box -->
@@ -795,17 +896,18 @@
             <!-- code block END -->
 
             <p><code>
-               <pre>[
-                    {
-                        "name": "fgdfgdfg",
-                        "about": "dfgdfgfdg",
-                        "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
-                        "createdAt": "2017-11-06T18:54:25.146Z",
-                        "updatedAt": "2017-11-06T18:54:25.146Z",
-                        "id": "5a00afe1c567830400e7f921",
-                        "count": 0
-                    }
-                ] </pre>
+               <pre>
+[
+    {
+        "name": "fgdfgdfg",
+        "about": "dfgdfgfdg",
+        "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
+        "createdAt": "2017-11-06T18:54:25.146Z",
+        "updatedAt": "2017-11-06T18:54:25.146Z",
+        "id": "5a00afe1c567830400e7f921",
+        "count": 0
+    }
+] </pre>
                 </code></p>
 
             <!-- query box -->
@@ -865,9 +967,25 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>DELETE /category/:id</code></p>
+            <p><code>DELETE /category/&lt;ID&gt;</code></p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to delete</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Edit Category</h2>
@@ -883,17 +1001,33 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>PUT /category/:id</code></p>
+            <p><code>PUT /category/&lt;ID&gt;</code></p>
             <!-- code block END -->
 
             <p><code>
                 <pre>
-                        {
-                            "name": "News", 
-                            "about": "Basic News Category listing"
-                          }
+{
+    "name": "News", 
+    "about": "Basic News Category listing"
+}
                 </pre>
             </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to edit</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -933,24 +1067,40 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /category/:id</code></p>
+            <p><code>GET /category/&lt;ID&gt;</code></p>
             <!-- code block END -->
 
             <p><code>
                 <pre>
-                        [
-                        {
-                            "name": "fgdfgdfg",
-                            "about": "dfgdfgfdg",
-                            "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
-                            "createdAt": "2017-11-06T18:54:25.146Z",
-                            "updatedAt": "2017-11-06T18:54:25.146Z",
-                            "id": "5a00afe1c567830400e7f921",
-                            "count": 0
-                        }
-                    ]
+[
+    {
+        "name": "fgdfgdfg",
+        "about": "dfgdfgfdg",
+        "imageLink": "https://blogsterl.s3.amazonaws.com/d8de1540c6.JPG",
+        "createdAt": "2017-11-06T18:54:25.146Z",
+        "updatedAt": "2017-11-06T18:54:25.146Z",
+        "id": "5a00afe1c567830400e7f921",
+        "count": 0
+    }
+]
                 </pre>
             </code></p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to retrive</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -1030,9 +1180,25 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /trash/59ddfc65145da07419dd8cfa</code></p>
+            <p><code>GET /trash/&lt;ID&gt;</code></p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Post to trash</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Get Trashed post</h2>
@@ -1066,9 +1232,26 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /post/:str/search</code></p>
+            <p><code>GET /post/&lt;STR&gt;/search</code></p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>STR</td>
+                        <td>The STR parameter to Search</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'> Set views</h2>
@@ -1084,9 +1267,25 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /post/:postId/:deviceid/tipViews</code></p>
+            <p><code>GET /post/:postId/&lt;DEVICE_ID&gt;/tipViews</code></p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DEVICE_ID</td>
+                        <td>The DEVICE_ID with which the view is noted or marked to remove redundancy</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h1 id='errors'>Errors</h1>
             <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter.
