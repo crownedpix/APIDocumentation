@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
 
-<!-- Mirrored from lord.github.io/slate/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2017 16:13:42 GMT -->
-<!-- Added by HTTrack -->
+
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<!-- /Added by HTTrack -->
+
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +12,6 @@
     <title>API Reference</title>
 
     <style>
-
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
@@ -23,9 +21,9 @@
 <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
         <span>
-        NAV
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
+            NAV
+            <img src="images/navbar.png" alt="Navbar" />
+        </span>
     </a>
     <div class="toc-wrapper">
         <img src="images/logo.png" class="logo" alt="Logo" />
@@ -41,7 +39,7 @@
                 <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
             </li>
             <li>
-                <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+                <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">API Listing</a>
             </li>
             <li>
                 <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">User</a>
@@ -78,8 +76,12 @@
         <!-- Sidebox for title END-->
 
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation by Crownedpix</a></li>
+            <li>
+                <a href='#'>Sign Up for a Developer Key</a>
+            </li>
+            <li>
+                <a target="_blank" href='https://crownedpix.github.io'>Documentation by Crownedpix</a>
+            </li>
         </ul>
     </div>
     <!-- Wrapper box -->
@@ -96,29 +98,31 @@
 
             <p>We Used Sails.js to run the API. You can simply follow the online Video tutorial listed below.</p>
 
-            <p>To run the API on Heroku follow this video <a href="https://github.com/lord/slate">Run Sails on Heroku</a>.</p>
+            <p>To run the API on Heroku follow this video
+                <a href="https://github.com/lord/slate">Run Sails on Heroku</a>.</p>
 
-            <p>To run the API on local follow this video <a href="https://github.com/lord/slate">Run Sails on Localhost</a>.</p>
+            <p>To run the API on local follow this video
+                <a href="https://github.com/lord/slate">Run Sails on Localhost</a>.</p>
 
-            <p> Feel free contact us at <i>devecha.abid@gmail.com</i></p>
+            <p> Feel free contact us at
+                <i>devecha.abid@gmail.com</i>
+            </p>
 
             <!-- title -->
             <h1 id='authentication'>API listing</h1>
             <!-- title END -->
 
-            <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+            <p>The below API listing is done for the BlogSterl Website. After hosting the Application you can use their provided
+                URL in front of each below given API</p>
 
-            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the
-                following:
+            <p>Please check below for Postman files to directly check the API in postman. The url is configured in Postman xml
+                so as to access localhost only. To check it live you need to replace localhost by URL provided by heroku.
             </p>
 
-            <!-- code block -->
-            <p><code>Authorization: meowmeowmeow</code></p>
-            <!-- code block END -->
 
             <!-- notiec text -->
             <aside class="notice">
-                You must replace <code>meowmeowmeow</code> with your personal API key.
+                API server must be running for this API to work properly.
             </aside>
             <!-- notice text END -->
 
@@ -134,7 +138,9 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /users</code></p>
+            <p>
+                <code>GET /users</code>
+            </p>
             <!-- code block END -->
 
             <!-- success box -->
@@ -143,7 +149,8 @@
             </aside>
             <!-- success box END -->
 
-            <p><code>
+            <p>
+                <code>
 <pre>[{
       "firstname": "stringslash",
       "lastname": "network",
@@ -170,7 +177,8 @@
       "id": "59d1ec5d8538cc30101311b0",
       "count": 30
 }] </pre>
-            </code></p>
+            </code>
+            </p>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -233,30 +241,55 @@
 
             <p>This endpoint Get a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
+
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>Get /listUser/:id</code></p>
+            <p>
+                <code>Get /listUser/&lt;ID&gt;</code>
+            </p>
 
-            <p><code>
-              <pre>  {
-                    "firstname": "stringslash",
-                    "lastname": "network",
-                    "email": "string.slash@gmail.com",
-                    "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
-                    "createdAt": "2017-10-02T07:35:57.026Z",
-                    "updatedAt": "2017-11-08T18:32:59.703Z",
-                    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
-                    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
-                    "status": "SUSPEND",
-                    "id": "59d1ec5d8538cc30101311b0",
-                    "count": 30
-                }</pre>
-            </code></p>
+            <!-- warning Block -->
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
+            <!-- warning block END -->
+
+            <p>
+                <code>
+<pre>  
+{
+    "firstname": "stringslash",
+    "lastname": "network",
+    "email": "string.slash@gmail.com",
+    "createdAt": "2017-10-02T07:35:57.026Z",
+    "updatedAt": "2017-11-08T18:32:59.703Z",
+    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "SUSPEND",
+    "id": "59d1ec5d8538cc30101311b0",
+    "count": 30
+}</pre>
+            </code>
+            </p>
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to retrieve</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -276,10 +309,6 @@
                     <tr>
                         <td>email</td>
                         <td>email of User</td>
-                    </tr>
-                    <tr>
-                        <td>password</td>
-                        <td>password of User</td>
                     </tr>
                     <tr>
                         <td>createdAt</td>
@@ -314,24 +343,31 @@
 
             <p>This endpoint Adds a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /register</code></p>
+            <p>
+                <code>POST /register</code>
+            </p>
 
-            <p><code>
-              <pre>{
+            <!-- warning Block -->
+            <aside class="warning">All fields are required here</aside>
+            <!-- warning block END -->
+
+
+            <p>
+                <code>
+<pre>
+{
   "firstname": "stringslash", 
   "lastname": "", 
   "email"": "devecha.abid1@gmail.com",
   "password": "012345",
   "passwordConfirm": "012345"
 }</pre>
-            </code></p>
+            </code>
+            </p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -370,22 +406,28 @@
 
             <p>This endpoint Login a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
+
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /login</code></p>
+            <p>
+                <code>POST /login</code>
+            </p>
+            <!-- warning Block -->
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
+            <!-- warning block END -->
+            <p>
+                <code>
+<pre>
+{
+    "email": "devecha.abid1@gmail.com",
+    "password": "012345"
+}</pre>
+               </code>
+            </p>
 
-            <p><code>
-                 <pre>
-                    {
-                        "email": "devecha.abid1@gmail.com",
-                        "password": "012345"
-                    }</pre>
-               </code></p>
-
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -412,12 +454,90 @@
 
             <p>This endpoint Edit a specific User.</p>
 
+            <h3 id='http-request-2'>HTTP Request</h3>
+            <p>
+                <code>PUT /profileEdit</code>
+            </p>
+
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
             <!-- warning block END -->
 
-            <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>PUT /profileEdit</code></p>
+            <p>
+                <code>
+<pre>{
+  "firstname": "something Again",
+  "lastname": "someName",
+  "about": null,
+  "mobile": "99999999999",
+  "state": "AP",
+  "country": "India",
+  "imageURL": "https://blogsterl.s3.amazonaws.com/file.jpeg",
+  "facebook": "Faceebook.com",
+  "twitter": "twitter.com",
+  "google": "google.com",
+  "instagram": "intagram.com"
+}</pre>
+            </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>lastname of User</td>
+                    </tr>
+                    <tr>
+                        <td>about</td>
+                        <td>About User</td>
+                    </tr>
+                    <tr>
+                        <td>mobile</td>
+                        <td>Mobile number of User</td>
+                    </tr>
+                    <tr>
+                        <td>state</td>
+                        <td>State of the User</td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Country of the User</td>
+                    </tr>
+                    <tr>
+                        <td>imageURL</td>
+                        <td>Image of the User</td>
+                    </tr>
+                    <tr>
+                        <td>facebook</td>
+                        <td>Facebook URL the User</td>
+                    </tr>
+                    <tr>
+                        <td>twitter</td>
+                        <td>Twitter URL of the User</td>
+                    </tr>
+                    <tr>
+                        <td>google</td>
+                        <td>Google URL of the User</td>
+                    </tr>
+                    <tr>
+                        <td>instagram</td>
+                        <td>Instagram URL of the User</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>User Email Verification</h2>
@@ -426,18 +546,57 @@
             <p>This endpoint Verify's the specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="warning">This token id will be sent to email link.</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /user/verify/:tokenId</code></p>
+            <p>
+                <code>GET /user/verify/&lt;tokenId&gt;</code>
+            </p>
 
-            <p><code>
-                <pre>
-                {
-                    "message": "success"
-                }</pre>
-            </code></p>
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tokenId</td>
+                        <td>The tokenId of the User to verify</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <p>
+                <code>
+<pre>
+{
+    "message": "success"
+}</pre>
+            </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>firstname</td>
+                        <td>firstname of the User</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
 
             <!-- Sub API list heading -->
@@ -447,21 +606,44 @@
             <p>This endpoint Reset password of a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">
+                Resets the Password
+            </aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /user/resetpassword?token=dsfdasfewrewqr21321</code></p>
+            <p>
+                <code>POST /user/resetpassword?token=&lt;tokenId&gt;</code>
+            </p>
 
-            <p><code>
-                 <pre>
-                        { 
-                            "password" : "new",
-                            "confirmPassword": "new"
-                            }</pre>
-               </code></p>
+            <p>
+                <code>
+<pre>
+{ 
+  "password" : "new",
+  "confirmPassword": "new"
+}</pre>
+               </code>
+            </p>
+
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tokenId</td>
+                        <td>The tokenId of the User to verify</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -489,22 +671,42 @@
             <p>This endpoint Change password of a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">Changes the password of particular user</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /user/:userId/change-password</code></p>
+            <p>
+                <code>POST /user/&lt;ID&gt;/change-password</code>
+            </p>
 
-            <p><code>
-                    <pre>
-                        {
-                            "oldPassword" : "lsdklfjdslkfjsdlkfjdsf",
-                            "password" : "newClarity",
-                            "confirmPassword" : "newClarity"
-                        }</pre>
-             </code></p>
+            <p>
+                <code>
+<pre>
+{
+    "oldPassword" : "lsdklfjdslkfjsdlkfjdsf",
+    "password" : "newClarity",
+    "confirmPassword" : "newClarity"
+}</pre>
+             </code>
+            </p>
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to Change password of</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -534,19 +736,23 @@
 
             <p>This endpoint Forgot password of a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /user/forgot-password</code></p>
+            <p>
+                <code>POST /user/forgot-password</code>
+            </p>
 
-            <p><code>
-                                <pre>
-                                        {"email":"someone@gmail.com"}</pre>
-                         </code></p>
+            <p>
+                <code>
+<pre>
+{
+    "email":"someone@gmail.com"
+}
+</pre>
+</code>
+            </p>
 
-            <h3 id='url-parameters'>URL Parameters</h3>
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -570,29 +776,49 @@
             <p>This endpoint Suspend a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">Adds a Status 'SUSPEND' to the particular User</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /suspend/:userId</code></p>
+            <p>
+                <code>GET /suspend/&lt;ID&gt;</code>
+            </p>
 
-            <p><code>
-                    <pre>
-                            {
-                                "firstname": "stringslash",
-                                "lastname": "network",
-                                "email": "string.slash@gmail.com",
-                                "password": "$2a$10$Jp.Xe7zAOpfNdwe07.SAaOnL5fZUC19XxonDWcLCCGjWy0YnGLO.C",
-                                "createdAt": "2017-10-02T07:35:57.026Z",
-                                "updatedAt": "2017-11-08T18:32:59.703Z",
-                                "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
-                                "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
-                                "status": "SUSPEND",
-                                "id": "59d1ec5d8538cc30101311b0"
-                            }</pre>
-             </code></p>
+            <p>
+                <code>
+<pre>
+{
+    "firstname": "stringslash",
+    "lastname": "network",
+    "email": "string.slash@gmail.com",   
+    "createdAt": "2017-10-02T07:35:57.026Z",
+    "updatedAt": "2017-11-08T18:32:59.703Z",
+    "confirmationToken": "f576c847d1703e6b890a7395f042a176ea5b75bd",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "SUSPEND",
+    "id": "59d1ec5d8538cc30101311b0"
+}</pre>
+             </code>
+            </p>
+
 
             <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the User to suspend</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
             <table>
                 <thead>
                     <tr>
@@ -651,11 +877,29 @@
             <p>This endpoint Trashed post of specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">List all Trashed post by this user</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>GET /trashedPosts/:userId</code></p>
+            <p>
+                <code>GET /trashedPosts/&lt;ID&gt;</code>
+            </p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Post to apply</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h1 id='Category'>Category</h1>
 
@@ -673,15 +917,20 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>POST /category</code></p>
+            <p>
+                <code>POST /category</code>
+            </p>
             <!-- code block END -->
 
-            <p><code>
-            <pre>{
-                    "name": "General", 
-                    "about": "Basic Category listing"
-                  } </pre>
-             </code></p>
+            <p>
+                <code>
+<pre>
+{
+   "name": "General", 
+   "about": "Basic Category listing"
+}</pre>
+             </code>
+            </p>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -719,22 +968,27 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /category</code></p>
+            <p>
+                <code>GET /category</code>
+            </p>
             <!-- code block END -->
 
-            <p><code>
-               <pre>[
-                    {
-                        "name": "fgdfgdfg",
-                        "about": "dfgdfgfdg",
-                        "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
-                        "createdAt": "2017-11-06T18:54:25.146Z",
-                        "updatedAt": "2017-11-06T18:54:25.146Z",
-                        "id": "5a00afe1c567830400e7f921",
-                        "count": 0
-                    }
-                ] </pre>
-                </code></p>
+            <p>
+                <code>
+               <pre>
+[
+    {
+        "name": "fgdfgdfg",
+        "about": "dfgdfgfdg",
+        "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
+        "createdAt": "2017-11-06T18:54:25.146Z",
+        "updatedAt": "2017-11-06T18:54:25.146Z",
+        "id": "5a00afe1c567830400e7f921",
+        "count": 0
+    }
+] </pre>
+                </code>
+            </p>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -793,7 +1047,9 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>DELETE /category/:id</code></p>
+            <p>
+                <code>DELETE /category/&lt;ID&gt;</code>
+            </p>
             <!-- code block END -->
               <!-- query box -->
               <h3 id='query-parameters'>Query Parameters</h3>
@@ -815,6 +1071,22 @@
                 </table>
             <!-- query box END -->
 
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to delete</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Edit Category</h2>
             <!-- Sub API list heading END -->
@@ -829,17 +1101,37 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>PUT /category/:id</code></p>
+            <p>
+                <code>PUT /category/&lt;ID&gt;</code>
+            </p>
             <!-- code block END -->
 
-            <p><code>
+            <p>
+                <code>
                 <pre>
-                        {
-                            "name": "News", 
-                            "about": "Basic News Category listing"
-                          }
+{
+    "name": "News", 
+    "about": "Basic News Category listing"
+}
                 </pre>
-            </code></p>
+            </code>
+            </p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to edit</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -863,8 +1155,6 @@
             </table>
             <!-- query box END -->
 
-
-
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Get Single Category</h2>
             <!-- Sub API list heading END -->
@@ -879,24 +1169,44 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /category/:id</code></p>
+            <p>
+                <code>GET /category/&lt;ID&gt;</code>
+            </p>
             <!-- code block END -->
 
-            <p><code>
+            <p>
+                <code>
                 <pre>
-                        [
-                        {
-                            "name": "fgdfgdfg",
-                            "about": "dfgdfgfdg",
-                            "imageLink": "https://blogsterl.s3.amazonaws.com/c9f1c34d-7f8c-40ef-b434-31d8de1540c6.JPG",
-                            "createdAt": "2017-11-06T18:54:25.146Z",
-                            "updatedAt": "2017-11-06T18:54:25.146Z",
-                            "id": "5a00afe1c567830400e7f921",
-                            "count": 0
-                        }
-                    ]
+[
+    {
+        "name": "fgdfgdfg",
+        "about": "dfgdfgfdg",
+        "imageLink": "https://blogsterl.s3.amazonaws.com/d8de1540c6.JPG",
+        "createdAt": "2017-11-06T18:54:25.146Z",
+        "updatedAt": "2017-11-06T18:54:25.146Z",
+        "id": "5a00afe1c567830400e7f921",
+        "count": 0
+    }
+]
                 </pre>
-            </code></p>
+            </code>
+            </p>
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Category to retrive</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- query box -->
             <h3 id='query-parameters'>Query Parameters</h3>
@@ -956,7 +1266,9 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /reportedPosts/</code></p>
+            <p>
+                <code>GET /reportedPosts/</code>
+            </p>
             <!-- code block END -->
 
             <!-- query box END -->
@@ -976,9 +1288,27 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /trash/59ddfc65145da07419dd8cfa</code></p>
+            <p>
+                <code>GET /trash/&lt;ID&gt;</code>
+            </p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>The ID of the Post to trash</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'>Get Trashed post</h2>
@@ -994,7 +1324,9 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /trashedPosts/</code></p>
+            <p>
+                <code>GET /trashedPosts/</code>
+            </p>
             <!-- code block END -->
             <!-- query box END -->
 
@@ -1012,9 +1344,28 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /post/:str/search</code></p>
+            <p>
+                <code>GET /post/&lt;STR&gt;/search</code>
+            </p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>STR</td>
+                        <td>The STR parameter to Search</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
             <!-- Sub API list heading -->
             <h2 id='get-a-specific-kitten'> Set views</h2>
@@ -1030,9 +1381,1153 @@
             <!-- sub headings END -->
 
             <!-- code block -->
-            <p><code>GET /post/:postId/:deviceid/tipViews</code></p>
+            <p>
+                <code>GET /post/:postId/&lt;DEVICE_ID&gt;/tipViews</code>
+            </p>
             <!-- code block END -->
             <!-- query box END -->
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DEVICE_ID</td>
+                        <td>The DEVICE_ID with which the view is noted or marked to remove redundancy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'> Get all post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint retrives all the posts.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /posts</code>
+            </p>
+            <!-- code block END -->
+            <!-- query box END -->
+            <p>
+                <code>
+<pre>
+[{
+"_user": "59d244157f9aa304001cbb31",
+"_category": "59ca27694dba2d0437cbadd0",
+"title": "mkn",
+"imageLink": "https://blogsterl.s3.amazonaws.com/97908b5c-df5c-4766-84c8-4a8ae7b562b0.jpg",
+"description": "&lt;p&gt;fbfbfg&lt;/p&gt;\n",
+"user": {
+    "firstname": "somit",
+    "lastname": "some",
+    "status": "ACTIVE",
+    "resetPasswordToken": null,
+    "resetPasswordExpires": null,
+    "about": "I am a good person",
+    "mobile": "99999999999",
+    "state": "AP",
+    "country": "India",
+    "imageURL": "https://blogsterl.s3.amazonaws.com/images/1508672341372_file.jpeg",
+    "facebook": "Faceebook.com",
+    "twitter": "twitter.com",
+    "google": "google.com",
+    "instagram": "intagram.com",
+    "id": "59d244157f9aa304001cbb31"
+},
+"category": {
+    "name": "News",
+    "about": "Basic News Category listing",
+    "imageLink": "Basic",
+    "id": "59ca27694dba2d0437cbadd0"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-11-04T18:36:30.792Z",
+"updatedAt": "2017-11-04T20:08:34.277Z",
+"views": [
+    {
+        "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+    }
+],
+"id": "59fe08ae434f86040007d4ee",
+"comments": 0
+}]
+</pre>
+                </code>
+            </p>
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Add Post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint adds the Post.</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>POST /posts</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+{
+"title": "First Post ahgag 3",
+"imageLink":"String",
+"category":"59af592c1ef83a1560688352",
+"description": "Something again as a text to display it all",
+"author":"someone"
+}
+</pre>
+</code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>title</td>
+                        <td>title of the post</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>category of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>author of the post</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Edit Post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Edits the Post.</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>POST /posts/&lt;ID&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+   <pre>
+    {
+        "title": "First Post ahgag 3",
+        "imageLink":"String",
+        "category":"59af592c1ef83a1560688352",
+        "description": "Something again as a text to display it all",
+        "author":"someone"
+      }
+   </pre>
+   </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>title</td>
+                        <td>title of the post</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>category of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td>author of the post</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get single post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Edits the Post.</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /posts/&lt;ID&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+[{
+"_user": "59d244157f9aa304001cbb31",
+"_category": "59ca27694dba2d0437cbadd0",
+"title": "mkn",
+"imageLink": "https://blogsterl.s3.amazonaws.com/97908b5c-df5c-4766-84c8-4a8ae7b562b0.jpg",
+"description": "&lt;p&gt;fbfbfg&lt;/p&gt;\n",
+"user": {
+    "firstname": "somit",
+    "lastname": "some",
+    "status": "ACTIVE",
+    "resetPasswordToken": null,
+    "resetPasswordExpires": null,
+    "about": "I am a good person",
+    "mobile": "99999999999",
+    "state": "AP",
+    "country": "India",
+    "imageURL": "https://blogsterl.s3.amazonaws.com/images/1508672341372_file.jpeg",
+    "facebook": "Faceebook.com",
+    "twitter": "twitter.com",
+    "google": "google.com",
+    "instagram": "intagram.com",
+    "id": "59d244157f9aa304001cbb31"
+},
+"category": {
+    "name": "News",
+    "about": "Basic News Category listing",
+    "imageLink": "Basic",
+    "id": "59ca27694dba2d0437cbadd0"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-11-04T18:36:30.792Z",
+"updatedAt": "2017-11-04T20:08:34.277Z",
+"views": [
+    {
+        "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+    }
+],
+"id": "59fe08ae434f86040007d4ee",
+"comments": 0
+}]
+</pre>
+                        </code>
+            </p>
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get All posts by Skip and limit</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get all posts by Skip and limit</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /posts/&lt;limit&gt;/&lt;skip&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+[
+{
+"_user": "59d1ec5d8538cc30101311b0",
+"_category": "59c948f9c08c29001b8c2fa3",
+"title": "post new 21",
+"imageLink": "https://travel.gc.ca/vt/images/promo/travel-insurance-bag.jpg",
+"description": "Something again as a text to display it all Something again as a text to display it allSomething again
+"user": {
+    "firstname": "stringslash",
+    "lastname": "network",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "ACTIVE",
+    "id": "59d1ec5d8538cc30101311b0"
+},
+"category": {
+    "name": "News EAST",
+    "about": "Basic News EAST Category listing",
+    "imageLink": "BasicImage",
+    "id": "59c948f9c08c29001b8c2fa3"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-10-20T03:40:47.296Z",
+"updatedAt": "2017-10-27T19:58:20.763Z",
+"views": [
+    {
+        "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+    }
+],
+"id": "59e9703ffa9232d0353054ce",
+"comments": 0
+}]
+</pre>
+   </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get all post by User Id</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get all posts by Skip and limit</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->postsbyuser/:userid
+            <p>
+                <code>PUT /postsbyuser/&lt;userID&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+[
+{
+"_user": "59d1ec5d8538cc30101311b0",
+"_category": "59c948f9c08c29001b8c2fa3",
+"title": "post new 21",
+"imageLink": "https://travel.gc.ca/vt/images/promo/travel-insurance-bag.jpg",
+"description": "Something again as a text to display it all Something again as a text to display it allSomething again
+"user": {
+    "firstname": "stringslash",
+    "lastname": "network",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "ACTIVE",
+    "id": "59d1ec5d8538cc30101311b0"
+},
+"category": {
+    "name": "News EAST",
+    "about": "Basic News EAST Category listing",
+    "imageLink": "BasicImage",
+    "id": "59c948f9c08c29001b8c2fa3"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-10-20T03:40:47.296Z",
+"updatedAt": "2017-10-27T19:58:20.763Z",
+"views": [
+    {
+        "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+    }
+],
+"id": "59e9703ffa9232d0353054ce",
+"comments": 0
+}]
+</pre>
+   </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get All posts by Skip and limit</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get all posts by Skip and limit</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /posts/&lt;limit&gt;/&lt;skip&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+[
+{
+"_user": "59d1ec5d8538cc30101311b0",
+"_category": "59c948f9c08c29001b8c2fa3",
+"title": "post new 21",
+"imageLink": "https://travel.gc.ca/vt/images/promo/travel-insurance-bag.jpg",
+"description": "Something again as a text to display it all Something again as a text to display it allSomething again
+"user": {
+    "firstname": "stringslash",
+    "lastname": "network",
+    "about": "fdfsdfsdfsdf sdf sdfsdfsdf",
+    "status": "ACTIVE",
+    "id": "59d1ec5d8538cc30101311b0"
+},
+"category": {
+    "name": "News EAST",
+    "about": "Basic News EAST Category listing",
+    "imageLink": "BasicImage",
+    "id": "59c948f9c08c29001b8c2fa3"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-10-20T03:40:47.296Z",
+"updatedAt": "2017-10-27T19:58:20.763Z",
+"views": [
+    {
+        "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+    }
+],
+"id": "59e9703ffa9232d0353054ce",
+"comments": 0
+}]
+</pre>
+   </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Delete Post</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Delete's the Post</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>DELETE /posts/&lt;ID&gt;/&lt;skip&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+{
+    success:"Post has been successfully deleted"
+}
+</pre>
+                    </code>
+            </p>
+
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get post by Category Id</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get all posts by Skip and limit</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /postsbycategory/&lt;categoryID&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+[{
+"_user": "59d244157f9aa304001cbb31",
+"_category": "59c948f9c08c29001b8c2fa3",
+"title": "ertertertert",
+"imageLink": "https://blogsterl.s3.amazonaws.com/3591f415-961c-48e6-865c-20879cdc2e64.JPG",
+"description": "&lt;p&gt;ert ert ert ertretertret&lt;/p&gt;\n",
+"user": {
+"firstname": "something Again",
+"lastname": "someName",
+"status": "ACTIVE",
+"resetPasswordToken": null,
+"resetPasswordExpires": null,
+"about": null,
+"mobile": "99999999999",
+"state": "AP",
+"country": "India",
+"imageURL": "https://blogsterl.s3.amazonaws.com/images/1508438070634_file.jpeg",
+"facebook": "Faceebook.com",
+"twitter": "twitter.com",
+"google": "google.com",
+"instagram": "intagram.com",
+"id": "59d244157f9aa304001cbb31"
+},
+"category": {
+"name": "News EAST",
+"about": "Basic News EAST Category listing",
+"imageLink": "BasicImage",
+"id": "59c948f9c08c29001b8c2fa3"
+},
+"status": "ACTIVE",
+"reported": false,
+"trash": false,
+"createdAt": "2017-10-21T03:56:12.306Z",
+"updatedAt": "2017-11-09T18:32:06.410Z",
+"views": [
+{
+    "userId": "59d1ec5d8538cc30101311b0"
+},
+{
+    "userId": "12345"
+},
+{
+    "userId": "undefined"
+},
+{
+    "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+},
+{
+    "userId": "41ef3a2c06229e610839e86fecc14bc2f3fffc29"
+},
+{
+    "userId": "64d2efb0fb6fbb17e6332f37d3da5263e416703c"
+},
+{
+    "userId": "c96afa4724dd225f28abee6e8d063cdc6e8089ae"
+}
+],
+"likes": [
+{
+    "userId": "59d1ec5d8538cc30101311b0"
+}
+],
+"id": "59eac55c7aaaec040090a992",
+"comments": 0
+}]
+</pre>
+   </code>
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+                    <!-- Sub API list heading -->
+                    <h2 id='get-a-specific-kitten'>Get Trashed post by User ID</h2>
+                    <!-- Sub API list heading END -->
+        
+                    <p>This endpoint Get all posts by Skip and limit</p>
+                    <!-- warning Block -->
+                    <aside class="warning">Inside HTML code blocks</aside>
+                    <!-- warning block END -->
+                    <!-- sub headings -->
+                    <h3 id='http-request'>HTTP Request</h3>
+                    <!-- sub headings END -->
+        
+                    <!-- code block -->
+                    <p>
+                        <code>GET /trashedPosts/&lt;userId&gt;</code>
+                    </p>
+                    <!-- code block END -->
+        
+                    <p>
+                        <code>
+        <pre>
+        [{
+        "_user": "59d244157f9aa304001cbb31",
+        "_category": "59c948f9c08c29001b8c2fa3",
+        "title": "ertertertert",
+        "imageLink": "https://blogsterl.s3.amazonaws.com/3591f415-961c-48e6-865c-20879cdc2e64.JPG",
+        "description": "&lt;p&gt;ert ert ert ertretertret&lt;/p&gt;\n",
+        "user": {
+        "firstname": "something Again",
+        "lastname": "someName",
+        "status": "ACTIVE",
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "about": null,
+        "mobile": "99999999999",
+        "state": "AP",
+        "country": "India",
+        "imageURL": "https://blogsterl.s3.amazonaws.com/images/1508438070634_file.jpeg",
+        "facebook": "Faceebook.com",
+        "twitter": "twitter.com",
+        "google": "google.com",
+        "instagram": "intagram.com",
+        "id": "59d244157f9aa304001cbb31"
+        },
+        "category": {
+        "name": "News EAST",
+        "about": "Basic News EAST Category listing",
+        "imageLink": "BasicImage",
+        "id": "59c948f9c08c29001b8c2fa3"
+        },
+        "status": "ACTIVE",
+        "reported": false,
+        "trash": false,
+        "createdAt": "2017-10-21T03:56:12.306Z",
+        "updatedAt": "2017-11-09T18:32:06.410Z",
+        "views": [
+        {
+            "userId": "59d1ec5d8538cc30101311b0"
+        },
+        {
+            "userId": "12345"
+        },
+        {
+            "userId": "undefined"
+        },
+        {
+            "userId": "8e58fc4ab900eb5c1d02bf8d73656229551f4f02"
+        },
+        {
+            "userId": "41ef3a2c06229e610839e86fecc14bc2f3fffc29"
+        },
+        {
+            "userId": "64d2efb0fb6fbb17e6332f37d3da5263e416703c"
+        },
+        {
+            "userId": "c96afa4724dd225f28abee6e8d063cdc6e8089ae"
+        }
+        ],
+        "likes": [
+        {
+            "userId": "59d1ec5d8538cc30101311b0"
+        }
+        ],
+        "id": "59eac55c7aaaec040090a992",
+        "comments": 0
+        }]
+        </pre>
+           </code>
+                    </p>
+        
+                    <h3 id='url-parameters'>Query Parameters</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>_user</td>
+                                <td>ID of the user</td>
+                            </tr>
+                            <tr>
+                                <td>_category</td>
+                                <td>ID of the category</td>
+                            </tr>
+                            <tr>
+                                <td>imageLink</td>
+                                <td>imageLink of the post</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>description of the post</td>
+                            </tr>
+                            <tr>
+                                <td>user</td>
+                                <td>Return complete user object</td>
+                            </tr>
+                            <tr>
+                                <td>category</td>
+                                <td>Return complete category object</td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>status of the post</td>
+                            </tr>
+                            <tr>
+                                <td>reported</td>
+                                <td>will be true if this post is reported by other users</td>
+                            </tr>
+                            <tr>
+                                <td>trash</td>
+                                <td>will be true if this post is trashed by other users</td>
+                            </tr>
+                            <tr>
+                                <td>createdAt</td>
+                                <td>created date of the post</td>
+                            </tr>
+                            <tr>
+                                <td>updatedAt</td>
+                                <td>updated date of the post</td>
+                            </tr>
+                            <tr>
+                                <td>views</td>
+                                <td>views of the post by DEVICE_ID</td>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>id of the post</td>
+                            </tr>
+                            <tr>
+                                <td>comments</td>
+                                <td>comments count of the post by userId</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
 
             <h1 id='errors'>Errors</h1>
             <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate
@@ -1096,15 +2591,9 @@
                 </tbody>
             </table>
 
-
-
-
-
         </div>
 
     </div>
 </body>
-
-<!-- Mirrored from lord.github.io/slate/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2017 16:13:44 GMT -->
 
 </html>
