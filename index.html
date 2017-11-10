@@ -79,7 +79,7 @@
 
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation by Crownedpix</a></li>
+            <li><a target="_blank" href='https://crownedpix.github.io'>Documentation by Crownedpix</a></li>
         </ul>
     </div>
     <!-- Wrapper box -->
@@ -106,18 +106,15 @@
             <h1 id='authentication'>API listing</h1>
             <!-- title END -->
 
-            <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+            <p>The below API listing is done for the BlogSterl Website. After hosting the Application you can use their provided URL in front of each below given API</p>
 
-            <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+            <p>Please check below for Postman files to directly check the API in postman. The url is configured in Postman xml so as to access localhost only. To check it live you need to replace localhost by URL provided by heroku.
             </p>
 
-            <!-- code block -->
-            <p><code>Authorization: meowmeowmeow</code></p>
-            <!-- code block END -->
 
             <!-- notiec text -->
             <aside class="notice">
-                You must replace <code>meowmeowmeow</code> with your personal API key.
+                API server must be running for this API to work properly.
             </aside>
             <!-- notice text END -->
 
@@ -232,12 +229,16 @@
 
             <p>This endpoint Get a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
+
 
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>Get /listUser/&lt;ID&gt;</code></p>
+
+            <!-- warning Block -->
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
+            <!-- warning block END -->
 
             <p><code>
 <pre>  
@@ -326,12 +327,14 @@
 
             <p>This endpoint Adds a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>POST /register</code></p>
+
+            <!-- warning Block -->
+            <aside class="warning">All fields are required here</aside>
+            <!-- warning block END -->
+
 
             <p><code>
 <pre>
@@ -383,13 +386,15 @@
 
             <p>This endpoint Login a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
+
 
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>POST /login</code></p>
-
+            <!-- warning Block -->
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
+            <!-- warning block END -->
             <p><code>
 <pre>
 {
@@ -425,12 +430,14 @@
 
             <p>This endpoint Edit a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
-
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>PUT /profileEdit</code></p>
+
+            <!-- warning Block -->
+            <aside class="success">
+                Returns an object of particular User.
+            </aside>
+            <!-- warning block END -->
 
             <p><code>
 <pre>{
@@ -511,7 +518,7 @@
             <p>This endpoint Verify's the specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="warning">This token id will be sent to email link.</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
@@ -567,11 +574,13 @@
             <p>This endpoint Reset password of a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">
+                Resets the Password
+            </aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
-            <p><code>POST /user/resetpassword?token=dsfdasfewrewqr21321</code></p>
+            <p><code>POST /user/resetpassword?token=&lt;tokenId&gt;</code></p>
 
             <p><code>
 <pre>
@@ -580,6 +589,23 @@
   "confirmPassword": "new"
 }</pre>
                </code></p>
+
+
+            <h3 id='url-parameters'>URL Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tokenId</td>
+                        <td>The tokenId of the User to verify</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h3 id='url-parameters'>Query Parameters</h3>
             <table>
@@ -609,7 +635,7 @@
             <p>This endpoint Change password of a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">Changes the password of particular user</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
@@ -670,9 +696,6 @@
 
             <p>This endpoint Forgot password of a specific User.</p>
 
-            <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
-            <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
             <p><code>POST /user/forgot-password</code></p>
@@ -710,7 +733,7 @@
             <p>This endpoint Suspend a specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">Adds a Status 'SUSPEND' to the particular User</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
@@ -807,7 +830,7 @@
             <p>This endpoint Trashed post of specific User.</p>
 
             <!-- warning Block -->
-            <aside class="warning">Inside HTML code blocks</aside>
+            <aside class="success">List all Trashed post by this user</aside>
             <!-- warning block END -->
 
             <h3 id='http-request-2'>HTTP Request</h3>
