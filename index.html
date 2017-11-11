@@ -4,7 +4,6 @@
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -12,6 +11,7 @@
     <title>API Reference</title>
 
     <style>
+
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
@@ -1051,24 +1051,24 @@
                 <code>DELETE /category/&lt;ID&gt;</code>
             </p>
             <!-- code block END -->
-              <!-- query box -->
-              <h3 id='query-parameters'>Query Parameters</h3>
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
             <table>
-                    <thead>
-                        <tr>
-                            <th>Parameter</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id</td>
-                            <td>id of the category.</td>
-                        </tr>
-                      
-                    
-                    </tbody>
-                </table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the category.</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
             <!-- query box END -->
 
             <h3 id='url-parameters'>URL Parameters</h3>
@@ -2370,26 +2370,26 @@
                 </tbody>
             </table>
 
-                    <!-- Sub API list heading -->
-                    <h2 id='get-a-specific-kitten'>Get Trashed post by User ID</h2>
-                    <!-- Sub API list heading END -->
-        
-                    <p>This endpoint Get all posts by Skip and limit</p>
-                    <!-- warning Block -->
-                    <aside class="warning">Inside HTML code blocks</aside>
-                    <!-- warning block END -->
-                    <!-- sub headings -->
-                    <h3 id='http-request'>HTTP Request</h3>
-                    <!-- sub headings END -->
-        
-                    <!-- code block -->
-                    <p>
-                        <code>GET /trashedPosts/&lt;userId&gt;</code>
-                    </p>
-                    <!-- code block END -->
-        
-                    <p>
-                        <code>
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Get Trashed post by User ID</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint Get all posts by Skip and limit</p>
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>GET /trashedPosts/&lt;userId&gt;</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
         <pre>
         [{
         "_user": "59d244157f9aa304001cbb31",
@@ -2458,76 +2458,213 @@
         }]
         </pre>
            </code>
-                    </p>
-        
-                    <h3 id='url-parameters'>Query Parameters</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>_user</td>
-                                <td>ID of the user</td>
-                            </tr>
-                            <tr>
-                                <td>_category</td>
-                                <td>ID of the category</td>
-                            </tr>
-                            <tr>
-                                <td>imageLink</td>
-                                <td>imageLink of the post</td>
-                            </tr>
-                            <tr>
-                                <td>description</td>
-                                <td>description of the post</td>
-                            </tr>
-                            <tr>
-                                <td>user</td>
-                                <td>Return complete user object</td>
-                            </tr>
-                            <tr>
-                                <td>category</td>
-                                <td>Return complete category object</td>
-                            </tr>
-                            <tr>
-                                <td>status</td>
-                                <td>status of the post</td>
-                            </tr>
-                            <tr>
-                                <td>reported</td>
-                                <td>will be true if this post is reported by other users</td>
-                            </tr>
-                            <tr>
-                                <td>trash</td>
-                                <td>will be true if this post is trashed by other users</td>
-                            </tr>
-                            <tr>
-                                <td>createdAt</td>
-                                <td>created date of the post</td>
-                            </tr>
-                            <tr>
-                                <td>updatedAt</td>
-                                <td>updated date of the post</td>
-                            </tr>
-                            <tr>
-                                <td>views</td>
-                                <td>views of the post by DEVICE_ID</td>
-                            </tr>
-                            <tr>
-                                <td>id</td>
-                                <td>id of the post</td>
-                            </tr>
-                            <tr>
-                                <td>comments</td>
-                                <td>comments count of the post by userId</td>
-                            </tr>
-                        </tbody>
-                    </table>
-        
+            </p>
+
+            <h3 id='url-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_user</td>
+                        <td>ID of the user</td>
+                    </tr>
+                    <tr>
+                        <td>_category</td>
+                        <td>ID of the category</td>
+                    </tr>
+                    <tr>
+                        <td>imageLink</td>
+                        <td>imageLink of the post</td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>description of the post</td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Return complete user object</td>
+                    </tr>
+                    <tr>
+                        <td>category</td>
+                        <td>Return complete category object</td>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td>status of the post</td>
+                    </tr>
+                    <tr>
+                        <td>reported</td>
+                        <td>will be true if this post is reported by other users</td>
+                    </tr>
+                    <tr>
+                        <td>trash</td>
+                        <td>will be true if this post is trashed by other users</td>
+                    </tr>
+                    <tr>
+                        <td>createdAt</td>
+                        <td>created date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>updatedAt</td>
+                        <td>updated date of the post</td>
+                    </tr>
+                    <tr>
+                        <td>views</td>
+                        <td>views of the post by DEVICE_ID</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>id of the post</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>comments count of the post by userId</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h1 id='Comments'>comments</h1>
+
+            <!-- Sub API list heading -->
+            <h2 id='get-a-specific-kitten'>Post Comment</h2>
+            <!-- Sub API list heading END -->
+
+            <p>This endpoint adds the Comment.</p>
+
+            <!-- warning Block -->
+            <aside class="warning">Inside HTML code blocks</aside>
+            <!-- warning block END -->
+            <!-- sub headings -->
+            <h3 id='http-request'>HTTP Request</h3>
+            <!-- sub headings END -->
+
+            <!-- code block -->
+            <p>
+                <code>POST /post/&lt;POSTID&gt;/comment</code>
+            </p>
+            <!-- code block END -->
+
+            <p>
+                <code>
+<pre>
+{
+"commentText":"First Pathika Comments2ggg22", 
+"userId":"59ddfe9a2094025567cde61f"
+}</pre>
+                                 </code>
+            </p>
+ <!-- query box -->
+ <h3 id='query-parameters'>Url Parameters</h3>
+ <table>
+     <thead>
+         <tr>
+             <th>Parameter</th>
+             <th>Description</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>POSTID</td>
+             <td>POSTID to which the comment is added to a particular post</td>
+         </tr>
+     </tbody>
+ </table>
+ <!-- query box END -->
+            <!-- query box -->
+            <h3 id='query-parameters'>Query Parameters</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>commentText</td>
+                        <td>commentText of the post.</td>
+                    </tr>
+                    <tr>
+                        <td>userId</td>
+                        <td>userId for the comment</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- query box END -->
+
+                   <!-- Sub API list heading -->
+                   <h2 id='get-a-specific-kitten'>Post Comment</h2>
+                   <!-- Sub API list heading END -->
+       
+                   <p>This endpoint adds the Comment.</p>
+       
+                   <!-- warning Block -->
+                   <aside class="warning">Inside HTML code blocks</aside>
+                   <!-- warning block END -->
+                   <!-- sub headings -->
+                   <h3 id='http-request'>HTTP Request</h3>
+                   <!-- sub headings END -->
+       
+                   <!-- code block -->
+                   <p>
+                       <code>GET /post/&lt;POSTID&gt;/getComments</code>
+                   </p>
+                   <!-- code block END -->
+       
+                   <p>
+                       <code>
+       <pre>
+       {
+       "commentText":"First Pathika Comments2ggg22", 
+       "userId":"59ddfe9a2094025567cde61f"
+       }</pre>
+                                        </code>
+                   </p>
+        <!-- query box -->
+        <h3 id='query-parameters'>Url Parameters</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>POSTID</td>
+                    <td>POSTID  which the comment is added to a particular post</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- query box END -->
+                   <!-- query box -->
+                   <h3 id='query-parameters'>Query Parameters</h3>
+                   <table>
+                       <thead>
+                           <tr>
+                               <th>Parameter</th>
+                               <th>Description</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>commentText</td>
+                               <td>commentText of the post.</td>
+                           </tr>
+                           <tr>
+                               <td>userId</td>
+                               <td>userId for the comment</td>
+                           </tr>
+                       </tbody>
+                   </table>
+                   <!-- query box END -->
+       
 
             <h1 id='errors'>Errors</h1>
             <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate
